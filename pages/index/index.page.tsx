@@ -1,11 +1,17 @@
-import React from 'react'
-import { Counter } from './Counter'
+import React from "react";
+import styled from "styled-components";
+import { Counter } from "./Counter";
 
-export { Page }
+export { Page };
+
+const Container = styled.div`
+  width: 100%;
+  background-color: red;
+`;
 
 function Page() {
   return (
-    <>
+    <Container>
       <h1>Welcome</h1>
       This page is:
       <ul>
@@ -14,6 +20,6 @@ function Page() {
           Interactive. <Counter />
         </li>
       </ul>
-    </>
-  )
+    </Container>
+  );
 }
