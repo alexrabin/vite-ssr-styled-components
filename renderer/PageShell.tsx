@@ -14,21 +14,6 @@ function PageShell({
   children: React.ReactNode;
   pageContext: PageContext;
 }) {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000); // Replace with an appropriate loading time
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="loader-box">
-        <span className="loader"></span>
-      </div>
-    );
-  }
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
